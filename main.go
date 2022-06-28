@@ -7,16 +7,20 @@ import (
 func main(){
 	sum := 0
 	len_args := len(os.Args) - 1
-	if len_args > 0 {
+//	if len_args > 0 {
 
 		var arg string
 
 		for i:= 1; i <= len_args; i++ {
 			arg = os.Args[i]
-			arr_arg := strings.Split(arg, " ")
-			sum += len(arr_arg)
+			if arg > ""{
+
+				arr_arg := strings.Split(arg, " ")
+				sum += len(arr_arg)
+			}
+
 		}
 		fmt.Println(sum)
-	}
+//	}
 
 }
